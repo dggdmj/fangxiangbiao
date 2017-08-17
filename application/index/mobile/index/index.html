@@ -1,0 +1,130 @@
+{include file="Public:head" /}
+  <div class="page-group">
+      <!-- 单个page ,第一个.page默认被展示-->
+      <div class="page">
+          <!-- 标题栏 -->
+          <header class="bar bar-nav">
+              <div class="row">
+                  <div class="col-30" id='city-picker'><span class="city_text">桂林市</span><span class="icon icon-down"></span></div>
+                  <div class="col-70">
+                      <div class="searchbar row">
+                          <div class="search-input col-80">
+                              <label class="icon icon-search" for="search"></label>
+                              <input type="search" id='search' placeholder='输入关键字...'/>
+                          </div>
+                          <a class="button button-fill button-primary col-20">搜索</a>
+                      </div>
+                  </div>
+              </div>
+          </header>
+
+          <!-- 这里是页面内容区 -->
+          <div class="content">
+
+              <!-- 区县表 -->
+              <div class="content-padded grid-demo area_list">
+                  <div class="row">
+                      <div class="col-30"><img src="/static/mobile/images/logo2.png"></div>
+                      <div class="col-70">
+                          <ul>
+                              <li><span>&nbsp;|&nbsp;</span><span>七星区</span></li>
+                              <li><span>&nbsp;|&nbsp;</span><span>象山区</span></li>
+                              <li><span>&nbsp;|&nbsp;</span><span>临桂区</span></li>
+                              <li><span>&nbsp;|&nbsp;</span><span>叠彩区</span></li>
+                              <li><span>&nbsp;|&nbsp;</span><span>七星区</span></li>
+                              <li><span>&nbsp;|&nbsp;</span><span>象山区</span></li>
+                              <li><span>&nbsp;|&nbsp;</span><span>临桂区</span></li>
+                              <li><span>&nbsp;|&nbsp;</span><span>叠彩区</span></li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+              <!-- Slider start -->
+              <div class="swiper-container" data-space-between='10'>
+                  <div class="swiper-wrapper">
+                      {volist name='banner' id='ban'}
+                      <div class="swiper-slide"><a href="{$ban.link}"><img src="{$ban.url}" alt=""></a> </div>
+                      {/volist}
+                  </div>
+                  <div class="swiper-pagination"></div>
+              </div>
+              <!-- Slider end-->
+              <!-- Card start -->
+              {volist name='goods' id='good'}
+              <div class="card demo-card-header-pic index-card">
+                  <div valign="bottom" class="card-header color-white no-border no-padding">
+                      <img class='card-cover' src="/static/mobile/images/20170630154914.png" alt="">
+                  </div>
+                  <div class="card-content">
+                      <div class="index-card-content-inner">
+                          <p class="inner-name">{$good.name}</p>
+                          <p class="inner-price">{$good.price}{$good.unit}</p>
+                      </div>
+                  </div>
+                  <div class="card-footer">
+                      <p>案场：{$good.local_discount}</p>
+                      <p>专享：{$good.vip_discount}</p>
+                      <p>契税补贴：{$good.subsidy}</p>
+                  </div>
+              </div>
+              {/volist}
+              <!-- Card end-->
+
+              <!--<div class="content-block">这里是content</div>-->
+              <!--<input type="text" id='city-picker'/>-->
+          </div>
+      </div>
+
+      <!-- 工具栏 -->
+      <nav class="bar bar-tab">
+          <a class="tab-item external active" href="/index">
+              <span class="icon icon-home"></span>
+              <span class="tab-label">首页</span>
+          </a>
+          <a class="tab-item external" href="#">
+              <span class="icon icon-star"></span>
+              <span class="tab-label">收藏</span>
+          </a>
+          <a class="tab-item external" href="#">
+              <span class="icon icon-settings"></span>
+              <span class="tab-label">设置</span>
+          </a>
+      </nav>
+
+  </div>
+
+  <!-- popup, panel 等放在这里 -->
+  <div class="panel-overlay"></div>
+  <!-- Left Panel with Reveal effect -->
+  <div class="panel panel-left panel-reveal">
+      <div class="content-block">
+          <p>这是一个侧栏</p>
+          <p></p>
+          <!-- Click on link with "close-panel" class will close panel -->
+          <p><a href="#" class="close-panel">关闭</a></p>
+      </div>
+  </div>
+
+{include file="Public:foot" /}
+<!-- 引入拓展插件开始 -->
+<script type='text/javascript' src='http://g.alicdn.com/msui/sm/0.6.2/js/sm-extend.min.js' charset='utf-8'></script>
+<!-- 引入拓展插件结束 -->
+<!-- 引入幻灯片插件开始 -->
+<script type="text/javascript" src="//g.alicdn.com/msui/sm/0.6.2/js/sm-city-picker.min.js" charset="utf-8"></script>
+<script>
+    $("#city-picker").cityPicker({
+        toolbarTemplate: '<header class="bar bar-nav">\
+    <button class="button button-link pull-right close-picker">确定</button>\
+    <h1 class="title">请选择城市</h1>\
+    </header>'
+    });
+
+
+    $(function() {
+        $(".swiper-container").swiper( {
+            autoplay: 2000,//可选选项，自动滑动
+        });
+    });
+
+</script>
+

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="/favicon.ico">
+    {notempty name="Think.session.web_site.site_keywords['data']"}
+    <meta name="Keywords" content="{$Think.session.web_site.site_keywords['data']}"/>
+    {else/}
+    <meta name="Keywords" content=""/>
+    {/notempty}
+    {notempty name="Think.session.web_site.site_description['data']"}
+    <meta name="Description" content="{$Think.session.web_site.site_description['data']}" />
+    {else/}
+    <meta name="Description" content="" />
+    {/notempty}
+    <title>{notempty name="Think.session.web_site.site_title['data']"}{$Think.session.web_site.site_title['data']}{else/}网站首页{/notempty}</title>
+    <!--sui start -->
+    <link rel="stylesheet" href="http://g.alicdn.com/msui/sm/0.6.2/css/sm.min.css">
+    <!-- 引入拓展插件样式开始 -->
+    <link rel="stylesheet" href="http://g.alicdn.com/msui/sm/0.6.2/css/sm-extend.min.css">
+    <!-- 引入拓展插件样式结束 -->
+    <!--sui end -->
+    <!--mycss start -->
+    <link rel="stylesheet" href="/static/mobile/css/style.css?time=<?php echo time(); ?>">
+    <!--mycss end -->
+</head>
+<body>
+
+
+

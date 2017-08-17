@@ -1,0 +1,38 @@
+ul{ list-style: none; margin:0px;padding: 0px}
+.page { font-size: 0.75rem }
+.page header{background:#A02925;color: #fff;}
+.page header .icon{font-size: 0.65rem}
+.page .bar{ height: 2.0rem;line-height: 2.0rem }
+.page header .row{ height: 100%;margin-left: 0px; }
+.page header .row div{ height: 100%;}
+.bar .searchbar{background: none;}
+.bar .searchbar .button.button-fill{background: none;}
+.searchbar .search-input input{height: 1.2rem}
+.searchbar .button { top: 0;!important; }
+.area_list { margin: 0px;height: 2.0rem;line-height: 2.0rem;overflow: hidden;color: #4D4B4C;font-weight:600  }
+.bar-nav~.content { top:2rem }
+.area_list .row { margin-left: 0px }
+.area_list .row div { height: 2.0rem;line-height: 2.0rem }
+.area_list .row div:nth-child(1) { width: 30%;padding: 0.4rem }
+.area_list .row div:nth-child(2) { width: 70%;padding:0.4rem 0}
+.area_list .row .col-30 img{ width:100%;height:100%;margin: auto 0px }
+.area_list .row div:nth-child(2) ul { height: 1.2rem;line-height: 1.2rem;overflow: hidden; }
+.area_list .row div:nth-child(2) ul li{ width: 25%;float: left }
+.swiper-wrapper .swiper-slide img { width: 100% }
+.swiper-container-horizontal>.swiper-pagination { bottom:0.6rem; }
+.swiper-container { padding-bottom:0px;height: 9rem;overflow: hidden;margin-bottom: 0.2rem  }
+.swiper-container .swiper-wrapper .swiper-slide img{ width: 100%;height: 9rem;  }
+@media screen and (max-width: 320px) {
+    .area_list ul li { font-size: 0.6rem }
+}
+@media screen and (max-width: 320px) {
+    .page header .row .col-70{ width: 75%;}
+}
+.card {margin: 0}
+.index-card .card-header .card-cover { height: 9rem }
+.index-card .card-footer{ padding: 0.2rem }
+.index-card .card-content { height: 1.5rem;line-height: 1.5rem;overflow: hidden;background: #dddddd }
+.index-card-content-inner p { margin: 0;width: 50%;float: left;padding-left: 1rem;overflow: hidden;font-weight: 600}
+/*下面这段样式错误*/
+.index-card .card-footer { width: 100%;display: block; background: #dddddd;margin-bottom: 0.5rem}
+.index-card .card-footer p { width: 100%;margin:0 auto 0 1rem}
